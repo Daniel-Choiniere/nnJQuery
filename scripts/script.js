@@ -1,8 +1,18 @@
-// ----------------- jQuery chaining -------------
-// linking together more than one elemnt manioulation in one statement
+// ----------------- Adding content to html document-------------
 
-$("#contact-methods").css({border: "3px solid red"})
-    .next().css({border: "2px solid green"})
-    .closest('section').css({border: "2px solid blue"});
+let tweet = "<div>The Big fight live: Ham vs cheese!</div>";
+
+// $("#tweets div").append(tweet);
+// $("#tweets div").prepend(tweet);
+// $("#tweets div p ").before(tweet);
+// $("#tweets div").after(tweet);
+$("#tweets div p").text(tweet);
 
 
+        // Adding and changing content methods
+// .append() adds content to the bottom of an element
+// .prepend() adds content to the top of an element
+// .before() adds content before the element
+// .after() adds content after the element 
+// .html() chnges the whole html of an element
+// .text() changes the text of an element
