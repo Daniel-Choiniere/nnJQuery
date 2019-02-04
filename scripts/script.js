@@ -1,9 +1,20 @@
-// /*global $*/
-//  // ----------------- Changing Attributes -------------
+/*global $*/
+//  // ----------------- CSS With Jquery -------------
 
-// .removeAttr() - removes an attribute completely
-// .attr() - can read or set any attribute
+// // check value of a certain property already given to that element 
+// console.log($("#social-nav").css("position"))
+// console.log($("#social-nav").css("top"));
 
-$("#contact img").removeAttr("alt");
+// // change the value of a property of an element
+// ($("#social-nav").css("top", "-200px"))
+// // can chain multiple properties
+// $("#social-nav").css("top", "-200px").css("left", "100px").css;
 
-$("#contact img").attr("alt", "location");
+
+// creating an object to define multiple CSS properties
+$("#social-nav").css({
+   "top" : "-400px",
+   "left" : "150px",
+   "opacity" : "0.5",
+   "border-top" : "4px solid red"
+});
