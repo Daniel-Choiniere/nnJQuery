@@ -1,12 +1,19 @@
 /*global $*/
-//  // ----------------- Doscumentt Ready vs Windows Load -------------
-//   if i want to or need to put my script tags (links) in the head as opposed to at the bottom of my body i need to include either docimnet ready or window load function
+//  // ----------------- The event object in Jquery -------------
+// I want to show you how to access the event object during events (such as click events) in your code.
 
-$(function() {
-    
-    // inside this function would be all the 
-    
-    
+$("document").ready(function(){
+    $("*").on("click", function(e) {
+        // logs the clicked on element html data
+        console.log(e.target);
+        // logs the event type
+        console.log("the event type is: " + e.type);
+        // logs the x-coordinate of the event (coordinaTE GOING LEFT TO RIGHT)
+        console.log("x coordinate of the event is: " + e.pageX);
+        // logs the x-coordinate of the event (coordinaTE GOING LEFT TO RIGHT)
+        console.log("y coordinate of the event is: " + e.pageY);
+        
+        // stops bubbling up the DOM and only selects the first tag element (not every parent)
+        e.stopPropagation();
+    });
 });
-
-// waits for the whole document to load then fire your script code
