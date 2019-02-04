@@ -1,12 +1,9 @@
-/*global $*/
- // ----------------- REMOVING CONTENT -------------
+// /*global $*/
+//  // ----------------- Changing Attributes -------------
 
-// .empty() -empties the inner html of an element
-// .remove() = removes the element completley
+// .removeAttr() - removes an attribute completely
+// .attr() - can read or set any attribute
 
-// $(".button").empty();
-// $("#points-of-sale").empty();
+$("#contact img").removeAttr("alt");
 
-
-$(".booty").remove();
-$("#contact img").remove();
+$("#contact img").attr("alt", "location");
