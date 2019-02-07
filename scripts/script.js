@@ -1,27 +1,19 @@
 /*global $*/
-//  // ----------------- Fading elements in and out -------------
+//  // ----------------- Hiode and Show Elements -------------
 
 
 $("document").ready(function(){
 
-    
-    $("section > h2").on("click", function() {
-        // can only animate items values that are numeric
-            // third parameter is the speed of animation
-            // fourth parameter is if it speeds up linear or other
-            // fifth parameter an optional function to fire at end of animation (ex. after user buys an item a small img of the bought item animated to the "checkout cart" and then a window pops up saying that the item has been added to the cart)
-        // $(this).fadeOut(3000).fadeIn(1500);
-       
-    //   makes a cool flashing effect fadeing in and out ovr and over
-        $(this).fadeTo(200, 0.2)
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.2)
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.2)
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.2)
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.2)
-                .fadeTo(200, 0.2);
+    $("img[alt=map]").on("click", function() {
+    // $("section > h2").on("click", function() {
+        
+        // element shrinks and animates to the left
+        // $(this).hide(1000);
+        
+        // animates (shrinks and mobves to the left, then animates back ame way when show is called)
+        // $(this).hide(1000).show(1000);1
+        
+        $("section > h2").toggle(1000);
+        
         });
 });
