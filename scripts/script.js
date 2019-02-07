@@ -1,23 +1,14 @@
 /*global $*/
-//  // ----------------- Fading Animation Example -------------
+//  // ----------------- Click to Expand Sliding Animation Example -------------
 
-// makes the quote section cycle through all the quotes and restart at the beginning once it has finished (each quote fading in and out on a delay)
+// when elements are clicked the paragraph below slides down and toggles back when clicked again
+
 $("document").ready(function(){
+
+    let items = $("#points-of-sale li");
     
-    let allQuotes = $("blockquote");
-    let currentQuote = 0;
-    
-    function changeQuote(){
-        $(allQuotes[currentQuote]).fadeOut(200);
-        
-        if(currentQuote == allQuotes.length -1) {
-            currentQuote = 0;
-        } else {
-            currentQuote++;
-        }
-        $(allQuotes[currentQuote]).fadeIn(200);
-        
-    }
-    let quoteTimer = setInterval(changeQuote, 1500);
-    
+    items.on("click", function(){
+       $(this).find("p").slideToggle(500); 
+    });
+
 });
