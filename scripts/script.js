@@ -1,19 +1,18 @@
 /*global $*/
-//  // ----------------- The event object in Jquery -------------
+//  // ----------------- Jquery animations -------------
 // I want to show you how to access the event object during events (such as click events) in your code.
 
 $("document").ready(function(){
-    $("*").on("click", function(e) {
-        // logs the clicked on element html data
-        console.log(e.target);
-        // logs the event type
-        console.log("the event type is: " + e.type);
-        // logs the x-coordinate of the event (coordinaTE GOING LEFT TO RIGHT)
-        console.log("x coordinate of the event is: " + e.pageX);
-        // logs the x-coordinate of the event (coordinaTE GOING LEFT TO RIGHT)
-        console.log("y coordinate of the event is: " + e.pageY);
-        
-        // stops bubbling up the DOM and only selects the first tag element (not every parent)
-        e.stopPropagation();
+    
+    function complete(){
+     alert("Animation complete!")   
+    }
+    
+    $("section > h2").on("click", function() {
+        // can only animate items values that are numeric
+            // third parameter is the speed of animation
+            // fourth parameter is if it speeds up linear or other
+            // fifth parameter an optional function to fire at end of animation (ex. after user buys an item a small img of the bought item animated to the "checkout cart" and then a window pops up saying that the item has been added to the cart)
+        $(this).animate({"width" : "500px", "height" : "100px"}, 1000, "linear", complete);
     });
 });
